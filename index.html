@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-card">
+        <h1 class="title">Student Information Form</h1>
+
+        <form id="registrationForm">
+          <div class="name-group">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="John"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="middleName">Middle Name</label>
+              <input
+                type="text"
+                id="middleName"
+                name="middleName"
+                placeholder="Roblo"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Dela Cruz"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="studentNumber">Student Number</label>
+            <input
+              type="text"
+              id="studentNumber"
+              name="studentNumber"
+              placeholder="24-XXXX"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="johndelacruz@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="course">Select Course</label>
+            <select id="course" name="course" required>
+              <option value="" disabled selected>
+                -- Choose your course --
+              </option>
+              <option value="IT">Information Technology</option>
+              <option value="CPE">Computer Engineering</option>
+              <option value="BSA">Business Administration</option>
+              <option value="EDUC">Education</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" id="registerButton">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
