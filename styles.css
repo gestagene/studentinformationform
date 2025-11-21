@@ -105,3 +105,7 @@ body {
 .invalid-input {
   border: 2px solid red !important;
 }
+
+.error-message {
+  font-size: 10px;
+}

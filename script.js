@@ -1,24 +1,19 @@
 $(function () {
   $("#registrationForm").on("blur", "input, select", function () {
-    $(this).data("touched", true);
-    validateField(this);
-  });
+    const $field = $(this);
+    let value = $field.val();
 
-  $("#registrationForm").on("keyup change", "input, select", function () {
-    if ($(this).data("touched")) {
-      validateField(this);
-    }
-  });
+    if (typeof value === "string") value = value.trim();
 
-  function validateField(field) {
-    let value = $(field).val()?.trim();
-
-    $(field).removeClass("valid-input invalid-input");
+    $field.removeClass("valid-input invalid-input");
+    $field.next(".error-message").remove();
 
     if (!value) {
-      $(field).addClass("invalid-input");
+      $field.addClass("invalid-input");
+
+      $field.after(`<div class="error-message">This field is required!</div>`);
     } else {
-      $(field).addClass("valid-input");
+      $field.addClass("valid-input");
     }
-  }
+  });
 });
